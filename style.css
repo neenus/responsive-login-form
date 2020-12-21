@@ -163,43 +163,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container .form-container form .form-group label {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-left: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-.container .form-container form .form-group .input-field {
-  position: relative;
+.container .form-container form .form-group .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.container .form-container form .form-group .input-field input {
-  padding-left: 3rem;
-}
-
-.container .form-container form .form-group .input-field i {
-  position: absolute;
-  font-size: 1.5rem;
-  top: 30%;
-  padding-left: 0.5rem;
-}
-
-.container .form-container form .form-group input {
+.container .form-container form .form-group .input-container input {
   font-size: 1.25rem;
   background-color: #f5f5f5;
   padding: 1rem;
-  margin: 5px 0;
   width: 100%;
-  border: none;
+  border: 1px solid rgba(122, 122, 122, 0.75);
+  border-left: none;
   -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
   outline: none;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.container .form-container form .form-group input:focus-within {
-  border-bottom: #0f0133 1px solid;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+.container .form-container form .form-group .input-container input:focus {
+  border: #0f0133 1px solid;
+  border-left: none;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.container .form-container form .form-group .input-container i {
+  background-color: #0f0133;
+  color: #fff;
+  font-size: 1.66rem;
+  padding: 1rem;
 }
 
 .container .form-container form .links {

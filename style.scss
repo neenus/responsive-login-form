@@ -116,41 +116,46 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 0.75rem;
 
         label {
-          font-size: 0.75rem;
+          font-size: 0.85rem;
           font-weight: 700;
-          margin-left: 5px;
+          display: block;
+          margin-bottom: 5px;
         }
 
-        .input-field {
-          position: relative;
+        .input-container {
+          // position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // border: 1px solid red;
 
           input {
-            padding-left: 3rem;
+            font-size: 1.25rem;
+            background-color: #f5f5f5;
+            padding: 1rem;
+            // margin: 5px 0;
+            width: 100%;
+            border: 1px solid rgba(122, 122, 122, 0.75);
+            border-left: none;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
+            outline: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            
+            &:focus {
+              border: #0f0133 1px solid;
+              border-left: none;
+              transition: all ease-in-out 0.5s;
+            }
           }
 
 
           i {
-            position: absolute;
-            font-size: 1.5rem;
-            top: 30%;
-            padding-left: 0.5rem;
-          }
-        }
-
-        input {
-          font-size: 1.25rem;
-          background-color: #f5f5f5;
-          padding: 1rem;
-          margin: 5px 0;
-          width: 100%;
-          border: none;
-          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.25);
-          outline: none;
-          border-radius: 5px;
-          
-          &:focus-within {
-            border-bottom: #0f0133 1px solid;
-            transition: all ease-in-out 0.3s;
+            // position: absolute;
+            background-color: #0f0133;
+            color: #fff;
+            font-size: 1.66rem;
+            padding: 1rem;
           }
         }
       }
