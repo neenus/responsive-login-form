@@ -120,9 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 .container .hl-innertext {
   background: white;
   font-size: 1.25rem;
-  padding: 0 0.5rem;
+  font-weight: 700;
+  padding: 8px;
   position: absolute;
   max-height: 100%;
+  border: 3px solid #ddd;
+  border-radius: 50%;
 }
 
 .container .form-container {
