@@ -35,9 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1rem 0.5rem;
   width: 100%;
   height: 100%;
-  margin-bottom: -64px;           // negative height of footer
-  padding-bottom: 64px;           // height of footer - needed to fix issue where footer covers page content when mobile keyboard is open
-  min-height: calc(100vh - 64px); // place footer at bottom
+  margin-bottom: -80px;           // negative height of footer
+  padding-bottom: 80px;           // height of footer - needed to fix issue where footer covers page content when mobile keyboard is open
+  min-height: calc(100vh - 48px); // place footer at bottom
 
   .social-container {
     display: flex;
@@ -226,6 +226,12 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+
+  img {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 footer {
@@ -258,10 +264,30 @@ footer {
 
 @media screen and (min-width: 600px) {
   .container {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     min-height: 100%;
-    max-width: 500px;
+    max-width: 980px;
     margin: 2rem 0;
+    padding: 0;
+  }
+  
+  .row {
+    display: flex;
+
+    .column-img {
+      width: 35%;
+
+      img {
+        display: block;
+      }
+    }
+
+    .column-form {
+      width: 65%;
+
+    }
   }
 
   footer {
