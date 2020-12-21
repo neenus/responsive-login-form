@@ -22,6 +22,7 @@ a {
   margin: 15px 0;
   font-size: 14px;
   transition: all ease-in-out 0.2s;
+  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.65);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +46,13 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding: 1rem 0;
     
+    .social {
+      &:hover, &:focus {
+        // outline: ;
+        transform: scale(1.3);
+      }
+    }
+
     .social .fab {
       margin: 0 20px;
       font-size: 2rem;
@@ -251,13 +259,14 @@ footer {
 @media screen and (min-width: 600px) {
   .container {
     border-radius: 5px;
-    max-height: 800px;
+    min-height: 100%;
     max-width: 500px;
     margin: 2rem 0;
   }
 
   footer {
-    position: unset;
+    position: fixed;
+    bottom: 0;
     flex-direction: row;
     justify-content: space-around;
   }
